@@ -10,19 +10,19 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 
 - Regístro de usuarios en admin (5 usuario - 3 atributos)
 
-- Estilos de CSS (fondo y color de la letra)
+- Estilos de CSS
 
 - Imágenes
 
-- Front-end framework [MaterilizeCSS](https://materializecss.com/) (Estilos y elementos)
+- Front-end framework [MaterilizeCSS](https://materializecss.com/) ( uso de clases de la libreria y parallax en pagina nosotros)
 
 - Footer y navbar mediante _block content_
 
 ## Módulo 6 - ABP 4
 
-- Formulario que guarda información de los usuarios ( página + estructura)
+- Formulario que guarda información de los usuarios (Regístro) 
 
-- Estilos de CSS (fondo y color de la letra)
+- Estilos de CSS
 
 - Logo
 
@@ -34,7 +34,7 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 
 - Inicio personalizado, nombre del usuario, mensaje de bienvenida
 
-- Realice al menos dos tipos de restricciones de acceso.
+- Restricción de acceso. http://127.0.0.1:8000/mymessages (se requiere loguearse)
 
 ## Módulo 6 - ABP 6
 
@@ -44,10 +44,7 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 
     - **Bloguers** tienen permisos para crear posts
 
-- Formulario para crear usuarios
-
-- Verificación de usuarios registrados en admin
-
+- Formulario para crear usuarios (Formulario de regístro)
 
 ## Módulo 7 - ABP 1
 
@@ -56,6 +53,7 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 - Migrar los modelos a tablas
   
 - Template con tabla de los usuarios registrados
+(en lugar de usuario se ha creato las lista de musica en diferentes formatos (JSON, fake JSON, html) - link en el footer)
 
 - Front-end framework [MaterilizeCSS](https://materializecss.com/)
 
@@ -84,6 +82,8 @@ para dar solución a los diferentes requerimientos funcionales de su proyecto.
 ## Módulo 7 - ABP 5
 
 - vuelta a migraciones anteriores (a la primera y hasta la actual)
+<img src="./extras/migration1.png" alt="" style="width:50%; margin: 50px 0 0 50px;" /><br/>
+<img src="./extras/migration2.png" alt="" style="width:50%; margin: 50px 0 0 50px;" /><br/>
 
 - IrreversibleError:
 
