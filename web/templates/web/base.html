@@ -18,6 +18,31 @@
 
 
 
+  <div class="bar_log purple darken-4">
+    {% if user.is_authenticated %}
+    
+    <div class="log">
+      <span class="pink-text text-accent-1">
+      Hola {{user.first_name}} {{user.last_name}} !
+      </span>
+    </div>
+    <div class="log">
+      <a class="pink-text text-accent-1" href="{% url 'my_messages' %}">mis comentarios</a>
+      <a class="teal-text text-accent-4" href="{% url 'logout' %}">logout</a>
+    </div>
+
+    {% else %}
+    
+    <div class="log">
+    </div>  
+    <div class="log">
+      <a class="teal-text text-accent-4" href="{% url 'register_user' %}">register</a>
+      <a class="teal-text text-accent-4" href="{% url 'login' %}">login</a>
+    </div>  
+    
+    {% endif %}
+  
+  </div>
 
     <nav>
         <div class="nav-wrapper">
@@ -69,7 +94,7 @@
         <div class="footer-copyright">
           <div class="container">
           © 2022 idd.cl
-          {% comment %} <a class="grey-text text-lighten-4 right" href="#!">More Links</a> {% endcomment %}
+          <a class="grey-text text-lighten-4 right" href="./admin/">admin</a>
           </div>
         </div>
       </footer>

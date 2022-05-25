@@ -28,6 +28,8 @@ def home(request):
 
 
 
+
+
 def all(request):
   playlist_results = Playlist.objects.all()
   return render(request,'web/all.html', {'playlist_results':playlist_results, 'sel':'all'})
@@ -122,4 +124,3 @@ def message_remove(request,pk):
   return redirect('message_list')
 
 
-  

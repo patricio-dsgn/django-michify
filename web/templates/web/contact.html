@@ -1,33 +1,71 @@
 {% extends './base.html' %}
-{% load static %}
 
-{% block title %}michify{% endblock title %}
+<title>{% block title %}Contacto - Comprando Presentes{% endblock %}</title>
+
 
 {% block content %}
 
-        <div class="parallax-container">
-          <div class="parallax"><img src="{% static 'web/img/bg1.png' %}"></div>
-        </div>
 
-        <div class="section white">
-          <div class="row container">
-            <img class="col s6 m3" src="{% static 'web/img/isotype.svg' %}"/>
-            <h2 class="header">Michify</h2>
-            <p class="grey-text text-darken-3 lighten-3">
-              Texto para desarrollo
+<div class="container" id="contact">
+    <div class="row">
+        <div class="col s12 m6">
+            <h2>Contáctanos</h2>
+            <p>Disponemos de diferentes plataformas para aclarar tus dudas o saber de ti.</p>
+
+            <p>
+                <i class="inline-icon material-icons">local_phone</i>
+                <strong>Llámanos — </strong>
+                <span>+56 9 903 03 456</span>
             </p>
-            <p>Como ya sabes, este es un proyecto sin fines de lucro y descansa en el apoyo de gente como tú para mantener nuestra señal en vivo. Si te gusta lo que escuchas, si compartes nuestro cariño por la música lejos del algoritmo, por favor apóyanos.</p>
-            <p>No tener fin de lucro es un elemento fundamental para nosotros y el proyecto. Significa que las horas que le dedicamos a esto las dedicamos fundamentalmente a tener la mejor selección musical que podamos. En preparar los mejores playlists y especiales y en producir los mejores y más interesantes programas. No en conseguir auspicios o en ver en la radio una inversión en búsqueda de rentabilidad. Por eso en esta radio no tenemos socios: hay amigos y hay amigas.</p>
-            <p>Te queremos invitar a serlo. El mínimo es escucharnos, agregar tu email y estar al tanto de las cosas nuevas que vamos preparando. Pero la más importante es con tu aporte mensual. Hemos preparado una forma sencilla y rápida de hacer llegar tu aporte, que es gestionado a través de los amigos de Reveniu. En caso que tengas dudas, puedes escribirnos a radio@super45.cl</p>
+            <p>
+                <i class="inline-icon material-icons">email</i>
+                <strong>Correo electrónico — </strong>
+                <span>hagacaquita@appoo.cl</span>
+            </p>
+        </div>
+        <div class="col s12 m6">
 
-            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-          </div>
+            <form method="post"> {% csrf_token %}
+
+                    <div class="input-field col s12">
+                        <input type="text" class="" id="id_name" name="name" required>
+                        <label for="id_name">Nombre</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="email" class="" id="id_sender" name="sender" required>
+                        <label for="id_sender">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" class="" id="id_subject" name="subject" required>
+                        <label for="id_subject">Asunto</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea class="form-control materialize-textarea" rows="4" name="message" id="id_message" required></textarea>
+                        <label for="id_message">Mensaje</label>
+                    </div>
+                    <div class="col s12">
+                        <label>
+                            <input type="checkbox" class="filled-out custom-checkbox" checked="checked" name="cc_myself" id="id_cc_myself"/>
+                            <span>Deseo una copia</span>
+                            <br/><br/> <hr/> <br/>
+                        </label> 
+                    </div>
+                    <div class="col s12">
+                        <button class="waves-effect waves-light btn green" type="submit">Enviar
+                            <i class="inline-icon material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
         </div>
 
-        <div class="parallax-container">
-          <div class="parallax"><img src="{% static 'web/img/bg2.png' %}"></div>
-        </div>
-  
-    
-    <script src="{% static '/web/js/title.js' %}"></script>
+    </div>
+</div>
+
+
+
+
+<!-- Contact End -->
+
 {% endblock %}

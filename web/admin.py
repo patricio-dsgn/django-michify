@@ -21,7 +21,7 @@ class table_format3(admin.ModelAdmin):
 class table_format4(admin.ModelAdmin):
     list_display = ('typesb', 'text', 'cause', 'photo')
 
-admin.site.register(Tip, table_format2)
+# admin.site.register(Tip, table_format2)
 admin.site.register(Post, table_format1)
 admin.site.register(Suscriptor, table_format3)
 
