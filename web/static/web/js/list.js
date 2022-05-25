@@ -24,7 +24,7 @@ fetch('./json')
     
     const arrayTagsAuthor = (myJson[random].tags_author).split('/');        
     arrayTagsAuthor.forEach(function(tag) {
-        tagsAuthor.innerHTML += `${tag} `;
+        tagsAuthor.innerHTML += `<span class="tag">${tag}</span>`;
     });
 
 

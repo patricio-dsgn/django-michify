@@ -41,7 +41,8 @@
     background: #fff;
     border-radius: 10px;
     width:400px;
-    margin: auto;
+    margin: 50px auto;
+    padding: 10px;
 }
 #radio h2{
     z-index: 200;
@@ -51,4 +52,12 @@
 
 img{
     width: 100%;
+}
+
+.tag{
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 0 2px 2px 0;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.3);
 }

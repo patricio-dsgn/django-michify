@@ -4,25 +4,6 @@
 
 Este proyecto es para recopilar _playlist_ creados por artistas.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Módulo 6 - ABP 3
 
 - Página que muestra información de los usuarios registrados.
@@ -39,7 +20,7 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 
 ## Módulo 6 - ABP 4
 
-- formulario que guarda información de los usuarios ( página + estructura)
+- Formulario que guarda información de los usuarios ( página + estructura)
 
 - Estilos de CSS (fondo y color de la letra)
 
@@ -86,23 +67,27 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 
 ## Módulo 7 - ABP 3
 
-- modelo de acceso a datos el uso de entidades con relaciones uno a uno, uno a muchos y muchos a muchos para dar solución a los diferentes requerimientos funcionales de su proyecto.
+- Modelo de acceso a datos (el uso de entidades con relaciones)
+para dar solución a los diferentes requerimientos funcionales de su proyecto.
 
-- Integre los diferentes mecanismos necesarios para registrar y gestionar la información relacionada a los diferentes procesos de su aplicación.
+    - Uno a uno
 
-• Utilice Templates para realizar la visualizar de los datos, en los cuales se puedan apreciar las diferentes relaciones del modelo de datos.
+    - Uno a muchos
+
+    - Muchos a muchos
+
+- Regístro y gestión de la información relacionada a los diferentes procesos.
+
+- Templates visualizar relaciones del modelo de datos
 
 
 ## Módulo 7 - ABP 5
 
-- vuelta a migraciones anteriores( hasta la primera y hasta la migración actual)
+- vuelta a migraciones anteriores (a la primera y hasta la actual)
 
-- IrreversibleError: Es un error al intentar revertir a una migracion irreversible que continen operaciones irreversibles.
+- IrreversibleError:
 
-
-    Elimina un campo de un modelo.
-
-    Cuando se invierte, esto es en realidad agregar un campo a un modelo. La operación es reversible (aparte de cualquier pérdida de datos,que es irreversible)si el campo es anulable o si tiene un valor por defecto que puede utilizarse para poblar la columna recreada. Si el campo no es anulable y no tiene un valor por defecto,la operación es irreversible.
+    **IrreversibleError**: Es un error al intentar revertir a una migracion que continen operaciones irreversibles. Cuando se elimina un campo de un modelo y se invierte, esto es en realidad agregar un campo a un modelo. La operación es reversible (aparte de cualquier pérdida de datos,que es irreversible)si el campo es anulable o si tiene un valor por defecto que puede utilizarse para poblar la columna recreada. Si el campo no es anulable y no tiene un valor por defecto,la operación es irreversible.
 
 ## Módulo 7 - ABP Sprint 7
 
@@ -125,7 +110,6 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 - El entorno virtual usado es **Pipenv**
 
 - Las contraseñas de prueba para cada usuario estan **README-keys.txt**.
-
 
 <!-- <kbd style="width:80%;"> 
     <img src="./extras/isotype.svg"/>

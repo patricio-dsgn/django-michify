@@ -1,0 +1,60 @@
+{% extends './base.html' %}
+{% load myapp_tags %}
+{% load static %}
+
+{% block title %}michify{% endblock title %}
+
+{% block content %}
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 card">
+
+        <div class="row">
+          {% for item in playlist_results %}
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{{ item.image }}">
+                <span class="card-title">{{ item.author }}</span>
+              </div>
+              <div class="card-content">
+                <p>{{ item.text }}</p>
+              </div>
+              <div class="card-action">
+                <a href="{{ item.link }}">{{ item.author }}</a> <br>
+                <p>
+                {% with item.tags_author|split:'/' as strs %}
+                    {% for str in strs %}
+                      <span>{{ str }}</span>
+                    {% endfor %}
+                {% endwith %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+    {% comment %} {% for item in query_results %}
+    <tr> 
+      <td>{{ item.run }}</td>
+      <td>{{ item.fname }}</td>
+      <td>{{ item.lname }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.email }}</td>
+    </tr>
+    {% endfor %} {% endcomment %}
+
+
+
+
+    <script src="{% static '/web/js/title.js' %}"></script>
+
+    {% endblock %}
