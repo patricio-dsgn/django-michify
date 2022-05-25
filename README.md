@@ -99,6 +99,7 @@ Este proyecto es para recopilar _playlist_ creados por artistas.
 
 - IrreversibleError: Es un error al intentar revertir a una migracion irreversible que continen operaciones irreversibles.
 
+
     Elimina un campo de un modelo.
 
     Cuando se invierte, esto es en realidad agregar un campo a un modelo. La operación es reversible (aparte de cualquier pérdida de datos,que es irreversible)si el campo es anulable o si tiene un valor por defecto que puede utilizarse para poblar la columna recreada. Si el campo no es anulable y no tiene un valor por defecto,la operación es irreversible.
