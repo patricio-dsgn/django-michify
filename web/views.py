@@ -21,6 +21,9 @@ from .models import *
 from .forms import *
 
 
+def admin(request):
+  return redirect('admin/')
+
 
 def home(request):
   playlist_results = Playlist.objects.all()
@@ -94,7 +97,7 @@ def contact(request):
       # send_mail(subject, message, from_email, recipient_list, fail_silently=False, 
       # auth_user=None, auth_password=None, connection=None, html_message=None)
       return redirect('success')
-  return render(request, "web/contact.html", {'nbar':'contacto','form': form})
+  return render(request, "web/contact.html", {'sel':'contact','form': form})
 
 def success(request):
   return render(request, 'web/success.html', {'success': success})
