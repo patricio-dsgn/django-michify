@@ -6,15 +6,17 @@
 {% block content %}
 
     <div class="container">
+        
         <div class="row">
-            <br><br>
-            <div class="col s12 blue lighten-3">
+            <br><br><br><br>
+            <div class="col s12 card">
                 <h3>Comentarios</h3>
                 <p>Consultas y sugerencias dejadas por nuestra comunidad</p>
 
                 {% for message in messages %}
+                    
+                    <div class="postit">
 
-                    <div class="col s12 m4 card">
                         {% comment %}
                         
                         {% endcomment %}
@@ -28,7 +30,9 @@
                 {% endfor %} 
 
             </div>
+            
         </div>
+        <br><br><br><br>
     </div>
 
 

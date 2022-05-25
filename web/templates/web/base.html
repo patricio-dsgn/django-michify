@@ -54,8 +54,8 @@
               <li {% if sel == 'about' %} class="active" {% endif %}><a href="{% url 'about' %}">Nosotros</a></li>
               <li {% if sel == 'all' %} class="active" {% endif %}><a href="{% url 'all' %}">Listas</a></li>
               <li {% if sel == 'blog' %} class="active" {% endif %}><a href="{% url 'blog' %}">Blog</a></li>
-              <li {% if sel == 'subscribe' %} class="active" {% endif %}><a href="{% url 'subscribe' %}">Suscribirse</a></li>
-              <li {% if sel == 'contact' %} class="active" {% endif %}><a href="{% url 'contact' %}">Contacto</a></li>
+              {% comment %} <li {% if sel == 'subscribe' %} class="active" {% endif %}><a href="{% url 'subscribe' %}">Suscribirse</a></li> {% endcomment %}
+              <li {% if sel == 'contact' %} class="active" {% endif %}><a href="{% url 'contact' %}">Comentarios</a></li>
             </ul>
         </div>
     </nav>
@@ -63,8 +63,8 @@
       <li {% if sel == 'about' %} class="active" {% endif %}><a href="{% url 'about' %}">Nosotros</a></li>
       <li {% if sel == 'all' %} class="active" {% endif %}><a href="{% url 'all' %}">Listas</a></li>
       <li {% if sel == 'blog' %} class="active" {% endif %}><a href="{% url 'blog' %}">Blog</a></li>
-      <li {% if sel == 'subscribe' %} class="active" {% endif %}><a href="{% url 'subscribe' %}">Suscribirse</a></li>
-      <li {% if sel == 'contact' %} class="active" {% endif %}><a href="{% url 'contact' %}">Contacto</a></li>
+      {% comment %} <li {% if sel == 'subscribe' %} class="active" {% endif %}><a href="{% url 'subscribe' %}">Suscribirse</a></li> {% endcomment %}
+      <li {% if sel == 'contact' %} class="active" {% endif %}><a href="{% url 'contact' %}">Comentarios</a></li>
     </ul>
 
     <header>

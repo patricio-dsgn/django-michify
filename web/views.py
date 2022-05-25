@@ -48,7 +48,8 @@ def subscribe(request):
   return render(request,'web/subscribe.html',{'sel':'subscribe'})
 
 def blog(request):
-  return render(request,'web/blog.html',{'sel':'blog'})
+  post_results = Post.objects.all()
+  return render(request,"web/blog.html",{'post_results':post_results,'sel':'blog'})
 
 
 def author(request, playlist_id):

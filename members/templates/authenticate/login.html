@@ -3,9 +3,9 @@
 {% block content %}
 
 <div class="container">
+    <br><br><br><br>
     <div class="row">
-
-        <div class="col air1 s12 m7">
+        <div class="col card section air1 s12 m7">
             <h2>Login</h2>
             <form method="POST" class="post-form">
             {% csrf_token %}
@@ -14,8 +14,10 @@
                 <input placeholder="password" type="password" name="password">
                 <button type="submit" class="green save btn btn-default">Entrar</button>
             </form>
+            <br><br>
         </div>
     </div>
+    <br><br><br><br>
 </div>
 
 {% endblock %}

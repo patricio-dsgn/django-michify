@@ -1,19 +1,21 @@
 from django.db import models
 from django.utils import timezone
 
+from django.db.models import Model
+
 class Playlist(models.Model):   
   url = models.CharField(max_length=100,default='')
   author = models.CharField(max_length=100,default='')
-  text = models.CharField(max_length=300,default='')
-  tags_author = models.CharField(max_length=100,default='')
-  tags_playlist = models.CharField(max_length=100,default='')
+  text = models.TextField()
+  tags_author = models.CharField(max_length=300,default='')
+  tags_playlist = models.CharField(max_length=300,default='')
   link = models.CharField(max_length=300,default='')
   image = models.ImageField(upload_to='media/covers/',default='')
 
 class Post(models.Model):
   idm = models.CharField(max_length=100)
   title = models.CharField(max_length=100)
-  text = models.CharField(max_length=100)
+  text = models.TextField()
   photo = models.ImageField(
     upload_to='media/photo_posts',
     default='media/default/default.jpg',
