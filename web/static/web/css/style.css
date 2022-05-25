@@ -1,0 +1,54 @@
+*{
+    /* margin: 0;
+    padding: 0;
+    border: 0; */
+}
+.bb *{
+    border: 1px solid #000;
+}
+
+
+.logo{
+    width: 200px;
+    margin: 13px;
+}
+
+
+.btn-random{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 100px;
+    margin: 30px auto ;
+    transform: scale(1);
+    transition: all 3s ease;
+    filter: hue-rotate(0deg);
+    z-index: 300;
+}
+
+
+.btn-random:hover{
+    transition: all 3s ease;
+    transform: scale(1.3) rotate(360deg);
+    filter: hue-rotate(1360deg);
+
+}
+
+
+#radio{
+    position: relative;
+    border: 20px solid #000;
+    background: #fff;
+    border-radius: 10px;
+    width:400px;
+    margin: auto;
+}
+#radio h2{
+    z-index: 200;
+    font-size: 40px;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}

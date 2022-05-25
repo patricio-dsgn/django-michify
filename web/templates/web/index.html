@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Hello World {% endblock title %}</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+    
+    <nav class="pink darken-1 center">
+        <div class="nav-wrapper">
+            <h4>Listas creadas por artistas</h4>
+            <!-- <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul> -->
+        </div>
+    </nav>
+
+    
+<section>
+    <div class="container">
+        <div class="row">
+
+            <br><br><br><br>
+            <div class="card col s12">
+    
+                
+    <ol class="col s11 offset-s1" id="list"></ol>
+    
+
+    <script>
+const pl = [
+    ["Santiago Motorizado","https://open.spotify.com/playlist/1B6JO6gfGIqQG93Yusn8fa?si=9999"],
+    ["Maybird","https://open.spotify.com/playlist/5cOpG7UOXi0uCJaOMegIyP?si=9999"],
+    ["Foxygen","https://open.spotify.com/playlist/1ZZzKGxbtbbvvtLudMvYPt?si=9999"],
+    ["Beck","https://open.spotify.com/playlist/5E49XPoHxWTWlNWDxPcmS9?si=9999"],
+    ["Arcade Of Fire","https://open.spotify.com/playlist/6Dg4KHCGScT7UqR3Q77qaB?si=9999"],
+    ["Lianne La Havas","https://open.spotify.com/playlist/3nuO3AweP5J2UwxanCwZ7O?si=9999"],
+    ["Skinshape","https://open.spotify.com/playlist/4RIJ1KBTKEaATnJINlWalg?si=9999"],
+    ["Jamiroquai","https://open.spotify.com/playlist/5XUaT7ILxIdmAxQAKvomoc?si=9999"],
+    ["Michael Seyer","https://open.spotify.com/playlist/2PqDJqo97I2NEIydbCGU3d?si=9999"],
+    ["Michael Kiwanuka","https://open.spotify.com/playlist/6X5BskG2UIeK3vEKPPL33Z?si=9999"],
+    ["Danger Mouse","https://open.spotify.com/playlist/1cAHI20k456593GCBNqzw6?si=9999"],
+    ["Breakbot","https://open.spotify.com/playlist/7xpzRRcQqg1nnOzelDMt8t?si=9999"],
+    ["Pavo Pavo","https://open.spotify.com/playlist/18tVmWvtRdMxiICbi5SBSX?si=9999"],
+    ["RZA","https://open.spotify.com/playlist/6B3QBPYh3BQK3snDdax1tE?si=9999"],
+    ["Chilly Gonzales","https://open.spotify.com/playlist/0T951TMnRGADk5uwwImjuQ?si=9999"],
+    ["CeeLo Green","https://open.spotify.com/playlist/5dbV7fQ3dl6nrV0ph80Ydr?si=9999"],
+    ["Faye Webster","https://open.spotify.com/playlist/3iDRlTfC78xD8Tdu2a3C3b?si=9999"],
+    ["Fleet Foxes","https://open.spotify.com/playlist/39j3jZBN2NumalOAmyiyXF?si=9999"],
+    ["Little Boots","https://open.spotify.com/playlist/4NhQmmW2JdxfnrACR5wX7J?si=9999"],
+    ["La Roux","https://open.spotify.com/playlist/4LyP68Mo6PriqM8E4o5w6t?si=9999"],
+    ["Justice","https://open.spotify.com/playlist/1WsQelgKiiSpg50pyKcHOx?si=9999"],
+    ["Sebastien Tellier","https://open.spotify.com/playlist/5HOnDGYRX8yF8RltZK5nZ4?si=9999"],
+    ["Franz Ferdinand","https://open.spotify.com/playlist/6AJOnil1uQZmK47lpFHPyv?si=9999"],
+    ["Julian Casablancas","https://open.spotify.com/playlist/7gtJZcPbLmiqlMqEBD2fLY?si=9999"],
+    ["Albert Hammond Jr.","https://open.spotify.com/playlist/0lZ6t0bB7LcfcSToyywlvK?si=9999"],
+    ["Pixies","https://open.spotify.com/playlist/31bKeRU3OENrnqazIdKYDg?si=9999"],
+    ["Kali Uchis","https://open.spotify.com/playlist/6Gv6mZ602yubxvPgzU6EGW?si=9999"],
+    ["Future Islands","https://open.spotify.com/playlist/4wJQaTmEFdDY4MHFoQMXWM?si=9999"],
+    ["Jason Isbell and the 400 Unit","https://open.spotify.com/playlist/213uwqry47kKBj1GiOy0ZG?si=9999"],
+    ["Phoebe Bridgers","https://open.spotify.com/playlist/2LBbaVu4zE8Rr2DedhbiNC?si=9999"],
+    ["Valerie June","https://open.spotify.com/playlist/2urf4yXIRMFOCN9uZQXDM0?si=9999"],
+    ["Javier Barría","https://open.spotify.com/playlist/4WH5UCZFlzfN53ZYnyAveV?si=9999"],
+    ["Daniel Melero","https://open.spotify.com/playlist/5TOYnL0sMTiZD6KGFSLUcG?si=9999"],
+    ["Of Montreal","https://open.spotify.com/playlist/6pCrXodZEqDhESeh6mkmEH?si=9999"],
+    ["Natalia Lafourcade","https://open.spotify.com/playlist/5yAjzXbJNzfegAsQhogKLe?si=9999"],
+    ["Diego Lorenzini","https://open.spotify.com/playlist/3BFs77gR9cT89LGlb9pO7q?si=9999"],
+    ["Gepe","https://open.spotify.com/playlist/37i9dQZF1DXcWcRIYY41Ix?si=9999"],
+    ["Waxahatchee","https://open.spotify.com/playlist/0V8xWEbz23eUlbhWOv9YJr?si=9999"],
+    ["Whitney","https://open.spotify.com/playlist/2cRDyqoTM6NTtMtR0TQtGU?si=9999"],
+    ["Wilco","https://open.spotify.com/playlist/7sjosd67Utls2mCcXpczpn?si=9999"],
+    ["The Black Keys","https://open.spotify.com/playlist/0SlCHlGqA2p6PQHjgvt9dB?si=9999"],
+    ["Jarvis Cocker","https://open.spotify.com/playlist/5MbmjSFTVVSY7bFDSfwigS?si=9999"],
+    ["Damon Albarn","https://open.spotify.com/playlist/3T1EJ1SlOnly4UQzk4Br20?si=9999"],
+    ["Snoop Dogg","https://open.spotify.com/playlist/1jAMODyF7kXqbP3fsZqbRL?si=9999"],
+    ["Alvarito Guiso (Perrosky)","https://open.spotify.com/playlist/0js2cMRkPYL3fF8yqPBXSO?si=9999"],
+    ["kendrick Lamar","https://open.spotify.com/playlist/5yo56SS65wxjls2sHOVWOM?si=9999"],
+    ["Paramore","https://open.spotify.com/playlist/6M3mHTPHKmZE5ffp81Q043?si=9999"],
+    ["Post Malone","https://open.spotify.com/playlist/62aTmrLRUWaYSFGbrw23RJ?si=9999"],
+    ["iDKHOW","https://open.spotify.com/playlist/0gcGZYWlsu5Yi4qOyM2tKk?si=9999"],
+    ];
+
+    const list = document.getElementById("list");
+    pl.forEach(element => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.classList.add("btn");
+        a.classList.add("purple");
+        a.classList.add("darken-4");
+        a.href = element[1];
+        a.innerHTML = element[0];
+        li.appendChild(a);
+        list.appendChild(li);
+    });
+
+        
+    </script>
+
+
+        </div>
+        <br><br><br><br>
+
+
+    </div>
+</div>
+
+</section>
+
+<style>
+    .btn{
+        margin: 10px;
+    }
+</style>
+
+    <footer class="page-footer red darken-1">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2022 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="{% static '/web/css/data.css' %}">
+
+</head>
+<body>
+  
+
+
+            <table class="responsive-table">
+  
+              <tbody>
+                {% for item in query_results %}
+                <tr>
+                  <td><img style="width: 50px;" src="{{ item.image }}" alt=""></td>
+                  <td>
+                    <b> {{ item.author }}</b></br>
+                    {{ item.url }}
+                  </td>
+                  <td>
+                    <div>{{ item.text }}</div>
+                  </td>
+                  <td>
+                    <a href="{{ item.link }}">{{ item.link }}</a> <br>
+                    <p> {{ item.tags_author }}</p>
+  
+                  </td>
+                  <!-- <td>{{ item.tags_playlist }}</td> -->
+  
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+</body>
+</html>

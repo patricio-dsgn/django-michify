@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}michify{% endblock title %}
+
+{% block content %}
+    <a href="" onclick="{window.location.reload()}">
+        <img class="btn-random" src="{% static '/web/img/random.svg' %}" alt="random">
+    </a>
+
+
+    {% comment %} {% for item in query_results %}
+    <tr> 
+      <td>{{ item.run }}</td>
+      <td>{{ item.fname }}</td>
+      <td>{{ item.lname }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.email }}</td>
+    </tr>
+    {% endfor %} {% endcomment %}
+
+    <div id="radio">
+      <div id="cover"></div>
+      <div id="author"></div>
+      <div id="review"></div>
+      <div id="tags-author"></div>
+    </div>
+
+
+    <script src="{% static '/web/js/list.js' %}"></script>
+    <script src="{% static '/web/js/title.js' %}"></script>
+{% endblock %}

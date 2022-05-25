@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="{% static '/web/css/fakejson.css' %}">
+
+</head>
+
+<body>
+
+
+
+  <pre>
+<q>[</q>
+  {% for item in query_results %}
+  <w>{</w>
+    <e>"id"</e>: <w>{{ forloop.counter }}</w>,
+    <e>"url"</e>: "{{ item.url }}",
+    <e>"author"</e>: "{{ item.author }}",
+    <e>"text"</e>: "{{ item.text }}",
+    <e>"tags_author"</e>: "{{ item.tags_author }}",
+    <e>"tags_playlist"</e>: "{{ item.tags_playlist }}",
+    <e>"link"</e>: "{{ item.link }}",
+    <e>"image"</e>: "{{ item.image }}",
+  <w>}</w>,{% endfor %}
+</pre>
+<q>]</q>
+</body>
+
+</html>
