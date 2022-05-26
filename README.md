@@ -4,6 +4,10 @@
 
 Este proyecto es para recopilar _playlist_ creados por artistas.
 
+
+<kbd style="width:80%;"> 
+    <img src="./extras/map.png"/>
+</kbd>
 ## Módulo 6 - ABP 3
 
 - Página que muestra información de los usuarios registrados.
@@ -110,7 +114,3 @@ para dar solución a los diferentes requerimientos funcionales de su proyecto.
 - El entorno virtual usado es **Pipenv**
 
 - Las contraseñas de prueba para cada usuario estan **README-keys.txt**.
-
-<!-- <kbd style="width:80%;"> 
-    <img src="./extras/isotype.svg"/>
-</kbd> -->
